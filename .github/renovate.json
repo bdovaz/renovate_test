@@ -1,0 +1,16 @@
+{
+    "baseBranches": [
+        "main"
+    ],
+    "customDatasources": {
+        "nextcloud": {
+            "defaultRegistryUrlTemplate": "https://apps.nextcloud.com/api/v1/platform/31.0.1/apps.json",
+            "transformTemplates": [
+                "{\"releases\": $map($[id = '{{packageName}}'].releases, function($r) { { \"version\": $r.version, \"releaseTimestamp\": $r.created, \"isStable\": $not($r.isNightly), \"changelogUrl\": $match($[id = '{{packageName}}'].website, /github.com\\/nextcloud\\//) ? $replace($[id = '{{packageName}}'].website, /(.*github.com\\/nextcloud)(\\/.*)/, \"$1\" & \"-releases\" & \"$2\") : $[id = '{{packageName}}'].website, \"sourceUrl\": $[id = '{{packageName}}'].website } })[] }"
+            ]
+        }
+    },
+    "recreateWhen": "always",
+    "prConcurrentLimit": 0,
+    "prHourlyLimit": 0
+}
