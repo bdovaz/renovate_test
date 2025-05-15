@@ -1,0 +1,11 @@
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: PowerShell@2.245.0
+    inputs:
+      pwsh: true
+      targetType: "inline"
+      script: Write-Host "Hello World"

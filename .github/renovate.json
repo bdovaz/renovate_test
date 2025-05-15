@@ -23,5 +23,8 @@
   ],
   "recreateWhen": "always",
   "prConcurrentLimit": 0,
-  "prHourlyLimit": 0
+  "prHourlyLimit": 0,
+  "azure-pipelines": {
+    "enabled": true
+  }
 }
