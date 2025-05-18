@@ -4,7 +4,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: PowerShell@2.245.0
+  - task: PowerShell@2.247.1
     inputs:
       pwsh: true
       targetType: "inline"
