@@ -6,5 +6,19 @@
   "azure-pipelines": {
     "enabled": true
   },
-  "extends": ["config:best-practices"]
+  "extends": ["config:best-practices"],
+  "customManagers": [
+      {
+          "customType": "regex",
+          "description": "Upgrade the Unity package files",
+          "managerFilePatterns": [
+              "**/Packages/manifest.json",
+              "**/Packages/*/package.json"
+          ],
+          "matchStrings": [
+              "\"(?<depName>(com.|org.nuget).*)\": \"(?<currentValue>\\d+.\\d+.\\d+.*)\""
+          ],
+          "datasourceTemplate": "unity3d-packages"
+      }
+  ],
 }
