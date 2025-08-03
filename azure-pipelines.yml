@@ -4,8 +4,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: PowerShell@2.245.0
+  - task: PowerShell@2
     inputs:
       pwsh: true
       targetType: "inline"
       script: Write-Host "Hello World"
+    env:
+      # renovate: datasource=nextcloud depName=user_oidc
+      USER_OIDC_VERSION: 7.2.0
