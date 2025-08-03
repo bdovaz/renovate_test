@@ -48,7 +48,7 @@
     },
     {
       "matchDatasources": ["nextcloud"],
-      "registryUrls": ["https://apps.nextcloud.com/api/v1/platform/31.0.6/apps.json"]
+      "registryUrls": ["https://apps.nextcloud.com/api/v1/platform/31.0.7/apps.json"]
     }
   ]
 }
