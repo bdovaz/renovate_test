@@ -11,4 +11,4 @@ steps:
       script: Write-Host "Hello World"
     env:
       # renovate: datasource=nextcloud depName=user_oidc
-      USER_OIDC_VERSION: 7.2.0
+      USER_OIDC_VERSION: 7.3.0
