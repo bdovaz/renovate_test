@@ -40,7 +40,11 @@
       "datasourceTemplate": "github-releases"
     }
   ],
-  "packageRules": [
+  "packageRules": [    
+    {
+      "matchDatasources": ["unity3d"],
+      "separateMinorPatch": true
+    },
     {
       "matchDatasources": ["unity3d-packages"],
       "matchPackageNames": ["/^org.nuget/"],
@@ -52,3 +56,4 @@
     }
   ]
 }
+
